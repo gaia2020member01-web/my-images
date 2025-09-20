@@ -17,9 +17,9 @@
         .horizontal-scroll::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
     </style>
 </head>
-<body class="bg-gray-50 p-4 sm:p-6 md:p-8">
+<body class="bg-gray-50">
 
-<div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden mt-8">
     <header class="bg-gray-800 text-white p-6 text-center">
         <h1 class="text-5xl font-bold">生き物のつながりを見てみよう！</h1>
         <p class="text-2xl mt-2">下のボタンで、説明を切りかえられます</p>
@@ -80,7 +80,6 @@
                 </div>
             </div>
         </div>
-
         <div id="panel-mid" class="content-panel">
             <div style="border: 5px solid #29B6F6; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #f4fcff;">
                 <h1 style="text-align: center; color: #0288D1; font-size: 48px; font-weight: bold;">食物連鎖<small>（しょくもつれんさ）</small>とエネルギーの流れ</h1>
@@ -116,7 +115,6 @@
                 </div>
             </div>
         </div>
-
         <div id="panel-high" class="content-panel">
              <div style="border: 5px solid #FFA726; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #fffaf0;">
                 <h1 style="text-align: center; color: #F57C00; font-size: 48px; font-weight: bold;">「食物連鎖」から、より複雑な「食物網」へ</h1>
@@ -167,10 +165,163 @@
                 </div>
             </div>
         </div>
-
         <div id="panel-adult" class="content-panel">
             <div style="border: 5px solid #7E57C2; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #f9f8ff;">
                 <h1 style="text-align: center; color: #512DA8; font-size: 48px; font-weight: bold;">生物多様性と私たちの暮らし</h1>
                 <p style="text-align: center; font-size: 28px; color: #333;">食物連鎖を基盤とする生態系の安定性が、私たちの暮らしを支えています。</p>
                  <div class="flex flex-col md:flex-row items-start justify-around mt-10 gap-8">
-                    <div class="w
+                    <div class="w-full md:w-1/2 text-center">
+                        <h2 style="color: #4527A0; font-size: 36px;">エネルギーの流れと生態系ピラミッド</h2>
+                        <svg viewBox="0 0 300 225" class="max-w-full rounded-lg inline-block">
+                            <polygon points="150,15 15,210 285,210" fill="#D1C4E9"/>
+                            <line x1="37.5" y1="165" x2="262.5" y2="165" stroke="#512DA8" stroke-width="3"/>
+                            <line x1="67.5" y1="112.5" x2="232.5" y2="112.5" stroke="#512DA8" stroke-width="3"/>
+                            <line x1="105" y1="60" x2="195" y2="60" stroke="#512DA8" stroke-width="3"/>
+                            <text x="150" y="45" text-anchor="middle" font-size="18" fill="#333">高次消費者</text>
+                            <text x="150" y="100" text-anchor="middle" font-size="18" fill="#333">二次消費者</text>
+                            <text x="150" y="155" text-anchor="middle" font-size="18" fill="#333">一次消費者</text>
+                            <text x="150" y="195" text-anchor="middle" font-size="18" fill="#333">生産者</text>
+                        </svg>
+                        <p class="text-xl leading-relaxed text-left mt-4">
+                            食物連鎖におけるエネルギー効率は高くなく、高次の消費者へ移行するにつれてエネルギー量は減少します。この構造は「<strong>生態系ピラミッド</strong>」として可視化され、底辺の「<strong>生産者</strong>」の豊かさが、生態系全体を支えていることを示しています。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/2 text-center">
+                        <h2 style="color: #4527A0; font-size: 36px;">生物多様性の価値とレジリエンス</h2>
+                         <svg viewBox="0 0 300 225" class="max-w-full rounded-lg inline-block">
+                             <circle cx="75" cy="112.5" r="15" fill="#9575CD"/> <circle cx="150" cy="45" r="15" fill="#9575CD"/>
+                             <circle cx="150" cy="180" r="15" fill="#9575CD"/> <circle cx="225" cy="112.5" r="15" fill="#9575CD"/>
+                             <circle cx="150" cy="112.5" r="15" fill="#7E57C2"/> <circle cx="105" cy="67.5" r="15" fill="#B39DDB"/>
+                             <circle cx="195" cy="67.5" r="15" fill="#B39DDB"/> <circle cx="105" cy="157.5" r="15" fill="#B39DDB"/>
+                             <circle cx="195" cy="157.5" r="15" fill="#B39DDB"/>
+                             <line x1="75" y1="112.5" x2="150" y2="45" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="75" y1="112.5" x2="150" y2="180" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="225" y1="112.5" x2="150" y2="45" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="225" y1="112.5" x2="150" y2="180" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="150" y1="112.5" x2="105" y2="67.5" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="150" y1="112.5" x2="195" y2="157.5" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="150" y1="112.5" x2="105" y2="157.5" stroke="#7E57C2" stroke-width="2"/>
+                             <line x1="150" y1="112.5" x2="195" y2="67.5" stroke="#7E57C2" stroke-width="2"/>
+                         </svg>
+                        <p class="text-xl leading-relaxed text-left mt-4">
+                            「<strong>生物多様性</strong>」が豊かであるとは、食物網が複雑で、多様な種が存在している状態を指します。これにより、環境変化に対する生態系の「<strong>レジリエンス（回復力）</strong>」が高まります。一部の種が減少しても、代替する種が存在することで、生態系全体の機能が維持されやすくなるのです。
+                        </p>
+                    </div>
+                </div>
+                 <hr class="my-12 border-t-4 border-purple-200">
+                 <div class="mt-8 space-y-9">
+                    <div>
+                        <h2 class="text-3xl font-bold text-center mb-6 text-purple-800">生物多様性を構成する３つのレベル</h2>
+                        <div class="grid md:grid-cols-3 gap-6 text-center">
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold text-2xl">生態系の多様性</h3><p class="text-xl">森林、河川、湿地、サンゴ礁など、様々な自然環境が存在すること。</p></div>
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold text-2xl">種の多様性</h3><p class="text-xl">動物、植物、菌類など、多様な種類の生物が存在すること。</p></div>
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold text-2xl">遺伝子の多様性</h3><p class="text-xl">同じ種でも、個体によって色や形、性質が違う遺伝的な個性があること。</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-center mb-6 text-purple-800">私たちを支える４つの生態系サービス</h2>
+                        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-xl">
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold mb-2 text-2xl">① 供給サービス</h3><p>食料、木材、水、医薬品の原料など、生活に必要な資源を提供してくれる。</p></div>
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold mb-2 text-2xl">② 調整サービス</h3><p>気候の安定、水質の浄化、自然災害の防止、病気の発生抑制など、環境を調整してくれる。</p></div>
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold mb-2 text-2xl">③ 文化的サービス</h3><p>自然景観や動植物とのふれあい、芸術や文化の源泉となる精神的な豊かさを与えてくれる。</p></div>
+                            <div class="bg-purple-50 p-5 rounded-lg"><h3 class="font-bold mb-2 text-2xl">④ 基盤サービス</h3><p>栄養塩類の循環や土壌の形成など、他の全てのサービスの基盤となる環境を維持してくれる。</p></div>
+                        </div>
+                    </div>
+                     <div>
+                        <h2 class="text-3xl font-bold text-center mb-6 text-red-700">生物多様性を脅かす４つの危機</h2>
+                        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-xl">
+                            <div class="bg-red-50 p-5 rounded-lg border-l-6 border-red-500"><h3 class="font-bold mb-2 text-2xl">第１の危機：開発</h3><p>森林伐採や埋め立てなど、人間活動による生息・生育地の破壊。</p></div>
+                            <div class="bg-red-50 p-5 rounded-lg border-l-6 border-red-500"><h3 class="font-bold mb-2 text-2xl">第２の危機：過剰利用</h3><p>漁業や狩猟、園芸採取などによる特定の種の獲りすぎ。</p></div>
+                            <div class="bg-red-50 p-5 rounded-lg border-l-6 border-red-500"><h3 class="font-bold mb-2 text-2xl">第３の危機：外来種</h3><p>人間によって持ち込まれた外来種による、在来種の捕食や生息地の競合。</p></div>
+                            <div class="bg-red-50 p-5 rounded-lg border-l-6 border-red-500"><h3 class="font-bold mb-2 text-2xl">第４の危機：地球環境の変化</h3><p>地球温暖化による気候変動や、海洋酸性化などの広域的な環境の変化。</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="panel-follow" class="content-panel">
+            <div style="border: 5px solid #F44336; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #ffebee;">
+                <h1 style="text-align: center; color: #D32F2F; font-size: 48px; font-weight: bold;">Follow US</h1>
+                <p style="text-align: center; font-size: 28px; color: #333;">私たちの活動をSNSでチェックしよう！</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 justify-items-center items-center mt-12 gap-6">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-4">Instagram</h2>
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/instagram.jpg" alt="Instagram QR Code" class="w-60 h-60 mx-auto border-3 border-gray-300 rounded-lg">
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-4">X (Twitter)</h2>
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/X.jpg" alt="X QR Code" class="w-60 h-60 mx-auto border-3 border-gray-300 rounded-lg">
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-4">Facebook</h2>
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/facebook.jpg" alt="Facebook QR Code" class="w-60 h-60 mx-auto border-3 border-gray-300 rounded-lg">
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-4">LINE</h2>
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/LINE.jpg" alt="LINE QR Code" class="w-60 h-60 mx-auto border-3 border-gray-300 rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer class="text-center bg-gray-100 py-12 mt-8">
+    <a href="https://gaia2020member01-web.github.io/our_activities/" target="_blank" rel="noopener noreferrer" 
+       class="bg-gray-700 hover:bg-gray-900 text-white font-bold text-2xl py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-block">
+        About US
+    </a>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabNav = document.getElementById('tab-nav');
+        const tabButtons = tabNav.querySelectorAll('.tab-button');
+        const contentPanels = document.querySelectorAll('.content-panel');
+
+        const tabColors = {
+            'panel-low': { border: '#4CAF50', bg: '#e8f5e9', text: '#2E7D32', bgHover: '#e8f5e9' },
+            'panel-mid': { border: '#29B6F6', bg: '#e3f2fd', text: '#0288D1', bgHover: '#e3f2fd' },
+            'panel-high': { border: '#FFA726', bg: '#fff3e0', text: '#F57C00', bgHover: '#fff3e0' },
+            'panel-adult': { border: '#7E57C2', bg: '#ede7f6', text: '#512DA8', bgHover: '#ede7f6' },
+            'panel-follow': { border: '#F44336', bg: '#ffebee', text: '#D32F2F', bgHover: '#ffebee' }
+        };
+
+        tabNav.addEventListener('click', (e) => {
+            const clickedButton = e.target.closest('.tab-button');
+            if (!clickedButton) return;
+
+            const targetPanelId = clickedButton.dataset.target;
+            
+            tabButtons.forEach(button => {
+                const colors = tabColors[button.dataset.target];
+                button.classList.remove('active');
+                button.style.backgroundColor = '';
+                button.style.borderColor = 'transparent';
+                button.style.color = '#6B7280';
+                 button.onmouseover = () => { if(!button.classList.contains('active')) button.style.backgroundColor = colors.bgHover; };
+                button.onmouseout = () => { if(!button.classList.contains('active')) button.style.backgroundColor = ''; };
+            });
+
+            const activeColors = tabColors[targetPanelId];
+            clickedButton.classList.add('active');
+            clickedButton.style.backgroundColor = activeColors.bg;
+            clickedButton.style.borderColor = activeColors.border;
+            clickedButton.style.color = activeColors.text;
+            
+            contentPanels.forEach(panel => {
+                panel.classList.toggle('active', panel.id === targetPanelId);
+            });
+        });
+
+         tabButtons.forEach(button => {
+            if (!button.classList.contains('active')) {
+                const colors = tabColors[button.dataset.target];
+                button.onmouseover = () => { if(!button.classList.contains('active')) button.style.backgroundColor = colors.bgHover; };
+                button.onmouseout = () => { if(!button.classList.contains('active')) button.style.backgroundColor = ''; };
+            }
+        });
+    });
+</script>
+</body>
+</html>
