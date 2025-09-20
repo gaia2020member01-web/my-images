@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物連鎖インタラクティブ解説ページ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .tab-button { transition: background-color 0.3s, color 0.3s; }
+        .tab-button.active { font-weight: bold; border-bottom-width: 4px; }
+        .content-panel { display: none; }
+        .content-panel.active { display: block; }
+        .photo-placeholder { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: 0 auto; background-color: #e0e0e0; border: 2px solid #ccc; }
+        .svg-circle-image { border-radius: 50%; object-fit: cover; border: 1px solid #ccc; }
+        .horizontal-scroll::-webkit-scrollbar { height: 8px; }
+        .horizontal-scroll::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-gray-50 p-4 sm:p-6 md:p-8">
+
+<div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+    <header class="bg-gray-800 text-white p-6 text-center">
+        <h1 class="text-5xl font-bold">生き物のつながりを見てみよう！</h1>
+        <p class="text-2xl mt-2">下のボタンで、説明を切りかえられます</p>
+    </header>
+
+    <nav class="grid grid-cols-5 text-xl" id="tab-nav">
+        <button data-target="panel-low" class="tab-button active p-4 border-b-4 border-green-500 bg-green-100 text-green-800" style="border-color: #4CAF50; color: #2E7D32;">
+            低学年まで
+        </button>
+        <button data-target="panel-mid" class="tab-button p-4 border-b-4 border-transparent text-gray-500 hover:bg-blue-50" style="border-color: transparent;">
+            中学年
+        </button>
+        <button data-target="panel-high" class="tab-button p-4 border-b-4 border-transparent text-gray-500 hover:bg-orange-50" style="border-color: transparent;">
+            高学年
+        </button>
+        <button data-target="panel-adult" class="tab-button p-4 border-b-4 border-transparent text-gray-500 hover:bg-purple-50" style="border-color: transparent;">
+            大人の方
+        </button>
+        <button data-target="panel-follow" class="tab-button p-4 border-b-4 border-transparent text-gray-500 hover:bg-red-50" style="border-color: transparent;">
+            Follow US
+        </button>
+    </nav>
+
+    <main class="p-6 sm:p-8 md:p-10">
+        <div id="panel-low" class="content-panel active">
+            <div style="border: 5px solid #4CAF50; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #f8fff8;">
+                <h1 style="text-align: center; color: #4CAF50; font-size: 48px; font-weight: bold;">しょくもつれんさ って なあに？</h1>
+                <p style="text-align: center; font-size: 28px; color: #333;">いきものたちは みんな ごはんの じゅんばんで つながっているよ！</p>
+                <div class="flex items-center mt-10 text-center overflow-x-auto pb-4 horizontal-scroll">
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/01.jpg" alt="植物の写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">しょくぶつ</p>
+                    </div>
+                    <div class="text-7xl text-green-500 font-bold mx-4 flex-shrink-0">→</div>
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/02.jpg" alt="バッタの写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">バッタ</p>
+                    </div>
+                    <div class="text-7xl text-green-500 font-bold mx-4 flex-shrink-0">→</div>
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/03.jpg" alt="カエルの写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">カエル</p>
+                    </div>
+                    <div class="text-7xl text-green-500 font-bold mx-4 flex-shrink-0">→</div>
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/04.jpg" alt="タカの写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">タカ</p>
+                    </div>
+                </div>
+                 <div style="background-color: #e8f5e9; border-radius: 15px; padding: 25px; margin-top: 40px; text-align: center;">
+                    <h2 style="color: #388E3C; font-size: 36px;">いろんな いきものが いるから あんしん！</h2>
+                    <p style="font-size: 24px; line-height: 1.8;">
+                        もしカエルさんがいなくなったら、タカさんはおなかがすいちゃう。<br>
+                        でも、ほかのいきもの（ヘビさんやトカゲさん）がいれば、だいじょうぶ！<br>
+                        たくさんのしゅるいのいきものがいることが、みんなをたすけているんだね。<br>
+                        これが「<strong style="color: #2E7D32;">せいぶつたようせい</strong>」だよ。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="panel-mid" class="content-panel">
+            <div style="border: 5px solid #29B6F6; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #f4fcff;">
+                <h1 style="text-align: center; color: #0288D1; font-size: 48px; font-weight: bold;">食物連鎖<small>（しょくもつれんさ）</small>とエネルギーの流れ</h1>
+                <p style="text-align: center; font-size: 28px; color: #333;">食べ物を通じて、生き物たちのエネルギーはバトンのように受けわたされていく！</p>
+                <div class="flex items-center mt-10 text-center overflow-x-auto pb-4 horizontal-scroll">
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/05.jpg" alt="太陽の写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">太陽の<br>エネルギー</p>
+                    </div>
+                    <div class="text-7xl text-yellow-500 font-bold mx-4 flex-shrink-0">→</div>
+                     <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/01.jpg" alt="植物の写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">植物が<br>もらう</p>
+                    </div>
+                    <div class="text-7xl text-green-500 font-bold mx-4 flex-shrink-0">→</div>
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/02.jpg" alt="バッタの写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">バッタに<br>移動</p>
+                    </div>
+                    <div class="text-7xl text-green-500 font-bold mx-4 flex-shrink-0">→</div>
+                    <div class="m-4 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/03.jpg" alt="カエルの写真" class="photo-placeholder">
+                        <p class="font-bold text-2xl mt-4">カエルに<br>移動</p>
+                    </div>
+                </div>
+                <div style="background-color: #e3f2fd; border-radius: 15px; padding: 25px; margin-top: 40px;">
+                    <h2 style="color: #01579B; font-size: 36px;">もし、バトンの途中の走者がいなくなったら？</h2>
+                    <p style="font-size: 24px; line-height: 1.8;">
+                        もし、バッタがいなくなってしまったら、カエルはごはんがなくなって困ってしまう。エネルギーのバトンが止まってしまうんだ。<br>
+                        でも、<strong style="color: #0277BD;">たくさんの種類の生き物（いろんな走者）</strong>がいれば、カエルはバッタの代わりにクモを食べるなど、他の道を探せるかもしれない。<br>
+                        この「<strong style="color: #0277BD;">たくさんの種類の生き物がいること</strong>」が「<strong style="color: #0277BD;">生物多様性</strong>」の大切なポイントなんだ。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="panel-high" class="content-panel">
+             <div style="border: 5px solid #FFA726; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #fffaf0;">
+                <h1 style="text-align: center; color: #F57C00; font-size: 48px; font-weight: bold;">「食物連鎖」から、より複雑な「食物網」へ</h1>
+                <p style="text-align: center; font-size: 28px; color: #333;">実際の自然界のつながりは、一本の鎖ではなく、複雑に絡み合った網のようになっている。</p>
+                <div class="text-center mt-6">
+                    <svg viewBox="0 0 600 330" class="max-w-full rounded-lg inline-block bg-orange-50 p-4">
+                        <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#F57C00" /></marker></defs>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/01.jpg" x="30" y="135" width="60" height="60" class="svg-circle-image"/>
+                        <text x="60" y="220" text-anchor="middle" font-size="18">植物</text>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/02.jpg" x="150" y="45" width="60" height="60" class="svg-circle-image"/>
+                        <text x="180" y="130" text-anchor="middle" font-size="18">バッタ</text>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/07.png" x="150" y="225" width="60" height="60" class="svg-circle-image"/>
+                        <text x="180" y="310" text-anchor="middle" font-size="18">アブラムシ</text>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/03.jpg" x="270" y="45" width="60" height="60" class="svg-circle-image"/>
+                        <text x="300" y="130" text-anchor="middle" font-size="18">カエル</text>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/06.png" x="270" y="225" width="60" height="60" class="svg-circle-image"/>
+                        <text x="300" y="310" text-anchor="middle" font-size="18">てんとう虫</text>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/08.jpg" x="390" y="135" width="60" height="60" class="svg-circle-image"/>
+                        <text x="420" y="220" text-anchor="middle" font-size="18">ヘビ</text>
+                        <image href="https://raw.githubusercontent.com/gaia2020member01-web/my-images/main/04.jpg" x="510" y="135" width="60" height="60" class="svg-circle-image"/>
+                        <text x="540" y="220" text-anchor="middle" font-size="18">タカ</text>
+                        <path d="M 90 165 L 150 75" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+                        <path d="M 90 165 L 150 255" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+                        <path d="M 210 75 L 270 75" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+                        <path d="M 210 255 L 270 255" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+                        <path d="M 330 75 L 390 155" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+                        <path d="M 450 165 L 510 165" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+                        <path d="M 330 90 C 405 30, 450 90, 510 150" stroke="#F57C00" stroke-width="2.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="6"/>
+                    </svg>
+                </div>
+                 <div class="flex flex-col md:flex-row justify-between mt-6 gap-6">
+                    <div style="background-color: #fff3e0; border-radius: 15px; padding: 25px; flex-basis: 50%;">
+                        <h2 style="color: #E65100; font-size: 30px;">生態系での役割</h2>
+                        <p style="font-size: 24px; line-height: 1.8;">
+                            ● <strong>生産者</strong> (植物):<br>
+                            光合成で栄養（エネルギー）を作り出す。<br><br>
+                            ● <strong>消費者</strong> (動物):<br>
+                            他の生き物を食べてエネルギーを得る。食べるものによって一次、二次…と分類される。
+                        </p>
+                    </div>
+                    <div style="background-color: #fff3e0; border-radius: 15px; padding: 25px; flex-basis: 50%;">
+                        <h2 style="color: #E65100; font-size: 30px;">生物多様性がなぜ重要か？</h2>
+                        <p style="font-size: 24px; line-height: 1.8;">
+                            この「<strong>食物網</strong>」が複雑で、たくさんの生き物で構成されているほど、生態系は安定する。<br><br>
+                            一部の生き物が減っても、他のルートでエネルギーが供給されるため、全体がすぐに崩れるのを防げるからだ。この豊かさこそが「<strong>生物多様性</strong>」の価値なんだ。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="panel-adult" class="content-panel">
+            <div style="border: 5px solid #7E57C2; border-radius: 20px; padding: 30px; font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #f9f8ff;">
+                <h1 style="text-align: center; color: #512DA8; font-size: 48px; font-weight: bold;">生物多様性と私たちの暮らし</h1>
+                <p style="text-align: center; font-size: 28px; color: #333;">食物連鎖を基盤とする生態系の安定性が、私たちの暮らしを支えています。</p>
+                 <div class="flex flex-col md:flex-row items-start justify-around mt-10 gap-8">
+                    <div class="w
